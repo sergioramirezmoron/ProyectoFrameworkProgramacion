@@ -17,10 +17,10 @@ public abstract class Escena implements ElementoJuego {
     }
 
     @Override
-    public void inicializar(){
-        if (this.juego == null || this.consola == null || this.objetos == null){
+    public void inicializar() {
+        if (this.juego == null || this.consola == null || this.objetos == null) {
             throw new IllegalStateException();
-        }else{
+        } else {
             this.objetos = new ArrayList<>();
             this.añadirObjetosIniciales();
         }

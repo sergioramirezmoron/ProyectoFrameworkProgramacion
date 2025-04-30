@@ -11,15 +11,14 @@ import java.util.Locale;
 
 public class Programa {
     public static void main(String[] args) {
-        try{
+        try {
             Image image = ImageIO.read(new File("src/bpc/framework/consola/sprite.jpg"));
             SpriteGameObjectTesteador tester = new SpriteGameObjectTesteador(image, 100, 100);
             EscenaTesteadora escena = new EscenaTesteadora();
             Juego juego = new Juego();
             juego.iniciar(escena, Resolucion.VENTANA_QHD);
-        }catch (IOException e){
+        } catch (IOException e) {
             System.out.println(e.getMessage());
-
         }
 
     }
