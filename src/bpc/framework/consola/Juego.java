@@ -9,8 +9,8 @@ public class Juego {
     private Resolucion resolucion;
 
     public void iniciar(Escena e, Resolucion r) {
-        this.consola = new Consola("Consola", this.getAnchuraPantalla(), this.getAlturaPantalla());
         this.resolucion = r;
+        this.consola = new Consola("Consola", this.getAnchuraPantalla(), this.getAlturaPantalla());
         this.setEscena(e);
         this.detener = false;
         while (!this.detener || !this.consola.getTeclado().teclaPulsada(27)) {
