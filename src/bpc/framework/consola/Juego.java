@@ -13,8 +13,9 @@ public class Juego {
         this.resolucion = r;
         this.setEscena(e);
         this.detener = false;
-        while (this.detener = false || this.consola.getTeclado().teclaPulsada(27)) {
-            consola.esperarSiguienteFrame();
+        while (!this.detener || !this.consola.getTeclado().teclaPulsada(27)) {
+            this.escena.ejecutarFrame();
+            this.consola.esperarSiguienteFrame();
         }
     }
 
