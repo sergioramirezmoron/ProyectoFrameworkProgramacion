@@ -11,7 +11,7 @@ import java.io.IOException;
 public class Programa {
     public static void main(String[] args) {
         try{
-            Image image = ImageIO.read(new File("C://Users//usuario//Downloads//ImagenSprite.png"));
+            Image image = ImageIO.read(new File("src/bpc/framework/consola/sprite.jpg"));
             SpriteGameObjectTesteador tester = new SpriteGameObjectTesteador(image, 100, 100);
             EscenaTesteadora escena = new EscenaTesteadora();
             Juego juego = new Juego();
