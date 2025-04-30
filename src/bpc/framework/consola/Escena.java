@@ -2,6 +2,7 @@ package bpc.framework.consola;
 
 import bpc.daw.consola.Consola;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Escena implements ElementoJuego {
@@ -13,7 +14,16 @@ public abstract class Escena implements ElementoJuego {
         this.juego = null;
         this.consola = null;
         this.objetos = null;
-        this.añadirObjetosIniciales();
+    }
+
+    @Override
+    public void inicializar(){
+        if (this.juego == null || this.consola == null || this.objetos == null){
+            throw new IllegalStateException();
+        }else{
+            this.objetos = new ArrayList<>();
+            this.añadirObjetosIniciales();
+        }
     }
 
     protected abstract void añadirObjetosIniciales();
